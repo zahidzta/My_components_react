@@ -1,9 +1,16 @@
 const variants = [
-    {variant: "primary", backgroundColor: "blue", textColor: "white"}
+    {variant: "primary", backgroundColor: "blue", textColor: "white"},
+    {variant: "secondary", backgroundColor: "grey", textColor: "white"},
+    {variant: "success", backgroundColor: "green", textColor: "white"},
+    {variant: "warning", backgroundColor: "yellow", textColor: "black"},
+    {variant: "danger", backgroundColor: "red", textColor: "white"},
+    {variant: "info", backgroundColor: "lightblue", textColor: "black"},
+    {variant: "light", backgroundColor: "white", textColor: "black"},
+    {variant: "dark", backgroundColor: "black", textColor: "white"},
 ]
 
 function Button({text, variant}){
-    const variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
+    let variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
     return(
         <button
         style={{
