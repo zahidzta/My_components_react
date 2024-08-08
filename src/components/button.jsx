@@ -1,6 +1,19 @@
-function Button({text}){
+const variants = [
+    {variant: "primary", backgroundColor: "blue", textColor: "white"}
+]
+
+function Button({text, variant}){
+    const variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
     return(
-        <button>{text}</button>
+        <button
+        style={{
+            backgroundColor: variantStyles.backgroundColor,
+            color: variantStyles.textColor,
+            border: "none",
+            padding: "5px",
+            borderRadius: "5px"
+        }}
+        >{text}</button>
     );
 }
 
