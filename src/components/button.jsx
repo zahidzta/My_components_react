@@ -1,12 +1,12 @@
 const variants = [
-    {variant: "primary", backgroundColor: "blue", textColor: "white"},
-    {variant: "secondary", backgroundColor: "grey", textColor: "white"},
-    {variant: "success", backgroundColor: "green", textColor: "white"},
-    {variant: "warning", backgroundColor: "yellow", textColor: "black"},
-    {variant: "danger", backgroundColor: "red", textColor: "white"},
-    {variant: "info", backgroundColor: "lightblue", textColor: "black"},
+    {variant: "primary", backgroundColor: "#1d35ad", textColor: "white"},
+    {variant: "secondary", backgroundColor: "#46464a", textColor: "white"},
+    {variant: "success", backgroundColor: "#3a802b", textColor: "white"},
+    {variant: "warning", backgroundColor: "#f2ef07", textColor: "black"},
+    {variant: "danger", backgroundColor: "#bd1111", textColor: "white"},
+    {variant: "info", backgroundColor: "#4099e3", textColor: "black"},
     {variant: "light", backgroundColor: "white", textColor: "black"},
-    {variant: "dark", backgroundColor: "black", textColor: "white"},
+    {variant: "dark", backgroundColor: "#19191a", textColor: "white"},
 ]
 
 function Button({text, variant}){
