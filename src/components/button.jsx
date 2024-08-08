@@ -18,7 +18,8 @@ function Button({text, variant}){
             color: variantStyles.textColor,
             border: "none",
             padding: "5px",
-            borderRadius: "5px"
+            borderRadius: "5px",
+            cursor: "pointer",
         }}
         >{text}</button>
     );
