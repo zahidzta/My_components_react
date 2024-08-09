@@ -9,7 +9,7 @@ const variants = [
     {variant: "dark", backgroundColor: "#19191a", textColor: "white"},
 ]
 
-function Button({text, variant}){
+function Button({text="Button", variant}){
     let variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
     return(
         <button
