@@ -9,8 +9,14 @@ const variants = [
     {variant: "dark", backgroundColor: "#19191a", textColor: "white"},
 ]
 
-function Button({text="Button", variant}){
-    let variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
+function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff"}){
+    let variantStyles = null
+    if (variant !== "custom"){
+        variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
+    } else {
+        variantStyles = {variant: "custom", backgroundColor: bgColor, textColor: txtColor}
+    }
+    
     return(
         <button
         style={{

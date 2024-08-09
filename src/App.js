@@ -12,6 +12,7 @@ function App() {
       <Button text = "Info" variant="info"/>
       <Button text = "Light" variant="light"/>
       <Button text = "Dark" variant="dark"/>
+      <Button text = "Custom" variant="custom" bgColor="#d10ab7" txtColor="#000"/>
     </div>
   );
 }
