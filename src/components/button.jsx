@@ -9,7 +9,7 @@ const variants = [
     {variant: "dark", backgroundColor: "#19191a", textColor: "white"},
 ]
 
-function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff"}){
+function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm"}){
     let variantStyles = null
     if (variant !== "custom"){
         variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
@@ -26,6 +26,7 @@ function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="
             padding: "5px",
             borderRadius: "5px",
             cursor: "pointer",
+            width: size === "lg" ? "100%" : "auto",
         }}
         >{text}</button>
     );
