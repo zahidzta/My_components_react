@@ -1,20 +1,20 @@
 const variants = [
-    {variant: "primary", backgroundColor: "#1d35ad", textColor: "white"},
-    {variant: "secondary", backgroundColor: "#46464a", textColor: "white"},
-    {variant: "success", backgroundColor: "#3a802b", textColor: "white"},
-    {variant: "warning", backgroundColor: "#f2ef07", textColor: "black"},
-    {variant: "danger", backgroundColor: "#bd1111", textColor: "white"},
-    {variant: "info", backgroundColor: "#4099e3", textColor: "black"},
-    {variant: "light", backgroundColor: "white", textColor: "black"},
-    {variant: "dark", backgroundColor: "#19191a", textColor: "white"},
-    {variant: "outline-primary", borderColor: "1px solid #1d35ad", textColor: "#1d35ad"},
-    {variant: "outline-secondary", borderColor: "1px solid #46464a", textColor: "#46464a"},
-    {variant: "outline-success", borderColor: "1px solid #3a802b", textColor: "#3a802b"},
-    {variant: "outline-warning", borderColor: "1px solid #f2ef07", textColor: "f2ef07"},
-    {variant: "outline-danger", borderColor: "1px solid #bd1111", textColor: "#bd1111"},
-    {variant: "outline-info", borderColor: "1px solid #4099e3", textColor: "#4099e3"},
-    {variant: "outline-light", borderColor: "1px solid white", textColor: "white"},
-    {variant: "outline-dark", borderColor: "1px solid #19191a", textColor: "#19191a"},
+    {variant: "primary", bgColor: "#1d35ad", txtColor: "white"},
+    {variant: "secondary", bgColor: "#46464a", txtColor: "white"},
+    {variant: "success", bgColor: "#3a802b", txtColor: "white"},
+    {variant: "warning", bgColor: "#f2ef07", txtColor: "black"},
+    {variant: "danger", bgColor: "#bd1111", txtColor: "white"},
+    {variant: "info", bgColor: "#4099e3", txtColor: "black"},
+    {variant: "light", bgColor: "white", txtColor: "black"},
+    {variant: "dark", bgColor: "#19191a", txtColor: "white"},
+    {variant: "outline-primary", borderStyle: "1px solid #1d35ad", txtColor: "#1d35ad"},
+    {variant: "outline-secondary", borderStyle: "1px solid #46464a", txtColor: "#46464a"},
+    {variant: "outline-success", borderStyle: "1px solid #3a802b", txtColor: "#3a802b"},
+    {variant: "outline-warning", borderStyle: "1px solid #f2ef07", txtColor: "f2ef07"},
+    {variant: "outline-danger", borderStyle: "1px solid #bd1111", txtColor: "#bd1111"},
+    {variant: "outline-info", borderStyle: "1px solid #4099e3", txtColor: "#4099e3"},
+    {variant: "outline-light", borderStyle: "1px solid white", txtColor: "white"},
+    {variant: "outline-dark", borderStyle: "1px solid #19191a", txtColor: "#19191a"},
 ]
 
 function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm", borderStyle="1px solid #1d35ad"}){
@@ -24,18 +24,18 @@ function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="
     } else {
 
         if (variant.includes("outline-")){
-            variantStyles = {variant: "outline-custom", borderColor: borderStyle, textColor: txtColor}
+            variantStyles = {variant: "outline-custom", borderStyle, txtColor}
         } else{
-            variantStyles = {variant: "custom", backgroundColor: bgColor, textColor: txtColor}
+            variantStyles = {variant: "custom", bgColor, txtColor}
         }
     }
     
     return(
         <button
         style={{
-            backgroundColor: variant.includes("outline-") ? "#fff0" : variantStyles.backgroundColor,
-            color: variantStyles.textColor,
-            border: variant.includes("outline-") ? variantStyles.borderColor : "none",
+            backgroundColor: variant.includes("outline-") ? "#fff0" : variantStyles.bgColor,
+            color: variantStyles.txtColor,
+            border: variant.includes("outline-") ? variantStyles.borderStyle : "none",
             padding: "5px",
             borderRadius: "5px",
             cursor: "pointer",
