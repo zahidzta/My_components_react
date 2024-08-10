@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 const variants = [
-    {variant: "primary", bgColor: "#1d35ad", txtColor: "white", bgHover: "#444", txtHover: "#fff"},
-    {variant: "secondary", bgColor: "#46464a", txtColor: "white", bgHover: "#444", txtHover: "#fff"},
-    {variant: "success", bgColor: "#3a802b", txtColor: "white", bgHover: "#444", txtHover: "#fff"},
-    {variant: "warning", bgColor: "#f2ef07", txtColor: "black", bgHover: "#444", txtHover: "#000"},
-    {variant: "danger", bgColor: "#bd1111", txtColor: "white", bgHover: "#444", txtHover: "#fff"},
-    {variant: "info", bgColor: "#4099e3", txtColor: "black", bgHover: "#444", txtHover: "#000"},
-    {variant: "light", bgColor: "white", txtColor: "black", bgHover: "#444", txtHover: "#000"},
-    {variant: "dark", bgColor: "#19191a", txtColor: "white", bgHover: "#444", txtHover: "#fff"},
+    {variant: "primary", bgColor: "#1d35ad", txtColor: "#fff", bgHover: "#1a2d8f", txtHover: "#fff"},
+    {variant: "secondary", bgColor: "#46464a", txtColor: "#fff", bgHover: "#38383b", txtHover: "#fff"},
+    {variant: "success", bgColor: "#3a802b", txtColor: "#fff", bgHover: "#347327", txtHover: "#fff"},
+    {variant: "warning", bgColor: "#f2ef07", txtColor: "#000", bgHover: "#e6e315", txtHover: "#000"},
+    {variant: "danger", bgColor: "#bd1111", txtColor: "#fff", bgHover: "#a60f0f", txtHover: "#fff"},
+    {variant: "info", bgColor: "#4099e3", txtColor: "#000", bgHover: "#418dcc", txtHover: "#000"},
+    {variant: "light", bgColor: "#fff", txtColor: "#000", bgHover: "#e3e3e3", txtHover: "#000"},
+    {variant: "dark", bgColor: "#19191a", txtColor: "#fff", bgHover: "#2a2a2b", txtHover: "#fff"},
     {variant: "outline-primary", bgColor: "#fff0", borderStyle: "1px solid #1d35ad", txtColor: "#1d35ad", bgHover: "#1d35ad", txtHover: "#fff"},
     {variant: "outline-secondary", bgColor: "#fff0", borderStyle: "1px solid #46464a", txtColor: "#46464a", bgHover: "#46464a", txtHover: "#fff"},
     {variant: "outline-success", bgColor: "#fff0", borderStyle: "1px solid #3a802b", txtColor: "#3a802b", bgHover: "#3a802b", txtHover: "#fff"},
@@ -19,15 +19,15 @@ const variants = [
     {variant: "outline-dark", bgColor: "#fff0", borderStyle: "1px solid #19191a", txtColor: "#19191a", bgHover: "#19191a", txtHover: "#fff"},
 ]
 
-function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm", borderStyle="1px solid #1d35ad",  bgHover="#1d35ad"}){
-    
+function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm", borderStyle="1px solid #1d35ad",  bgHover="#1d35ad", txtHover="#fff"}){
+
     let variantStyles = null
     if (!variant.includes("custom")){
         variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
     } else {
 
         if (variant.includes("outline-")){
-            variantStyles = {variant: "outline-custom", bgColor: "#fff0", borderStyle, txtColor, bgHover}
+            variantStyles = {variant: "outline-custom", bgColor: "#fff0", borderStyle, txtColor, bgHover, txtHover}
         } else{
             variantStyles = {variant: "custom", bgColor, txtColor, bgHover}
         }
@@ -42,7 +42,7 @@ function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="
         padding: "5px",
         borderRadius: "5px",
         cursor: "pointer",
-        width: size === "lg" ? "100%" : "auto", 
+        width: size === "lg" ? "100%" : "auto",
     }
 
     const hoverStyle = {

@@ -15,7 +15,7 @@ function App() {
       <Button text = "Custom" variant="custom" bgColor="#d10ab7" txtColor="#000"/>
       <Button text = "Botón bloque" variant="danger" size="lg"/>
       <Button text = "Outline primary" variant="outline-primary"/>
-      <Button text = "Outline-custom" variant="outline-custom" borderStyle="1px solid blue" txtColor="blue"/>
+      <Button text = "Outline custom" variant="outline-custom" borderStyle="1px solid blue" txtColor="blue" bgHover="#aaa" txtHover="#fb00ff"/>
     </div>
   );
 }
