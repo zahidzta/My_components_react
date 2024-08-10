@@ -43,6 +43,7 @@ function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="
         borderRadius: "5px",
         cursor: "pointer",
         width: size === "lg" ? "100%" : "auto",
+        transition: "background-color 0.6s ease",
     }
 
     const hoverStyle = {
