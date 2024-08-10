@@ -14,6 +14,7 @@ function App() {
       <Button text = "Dark" variant="dark"/>
       <Button text = "Custom" variant="custom" bgColor="#d10ab7" txtColor="#000"/>
       <Button text = "Botón bloque" variant="danger" size="lg"/>
+      <Button text = "Primary" variant="outline-primary"/>
     </div>
   );
 }
