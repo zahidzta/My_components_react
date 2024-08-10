@@ -17,12 +17,17 @@ const variants = [
     {variant: "outline-dark", borderColor: "1px solid #19191a", textColor: "#19191a"},
 ]
 
-function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm"}){
+function Button({text="Button", variant="primary", bgColor="#1d35ad", txtColor="#fff", size="sm", borderStyle="1px solid #1d35ad"}){
     let variantStyles = null
-    if (variant !== "custom"){
+    if (!variant.includes("custom")){
         variantStyles = variants.find(variantStyle => variantStyle.variant === variant)
     } else {
-        variantStyles = {variant: "custom", backgroundColor: bgColor, textColor: txtColor}
+
+        if (variant.includes("outline-")){
+            variantStyles = {variant: "outline-custom", borderColor: borderStyle, textColor: txtColor}
+        } else{
+            variantStyles = {variant: "custom", backgroundColor: bgColor, textColor: txtColor}
+        }
     }
     
     return(
